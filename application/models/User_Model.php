@@ -1,4 +1,3 @@
-
 <?php
 
 class User_Model extends CI_Model{
@@ -51,15 +50,10 @@ class User_Model extends CI_Model{
         $find_user=$query->num_rows($query);
 
         if($find_user>0){
-<<<<<<< HEAD:application/models/User_Model.php
             $usuario = $this->getUser($id);
             $this->session->set_userdata('usuario',$usuario_id);
             $this->session->set_flashdata('suc','Login confirmado');
             redirect('User/main');
-=======
-            $this->session->set_flashdata('suc','You are logged');
-            redirect('Admin/main');
->>>>>>> f02a6ee6fae887a3b26cc740c03c0915c73b41e9:application/models/Admin_Model.php
         }else{
             $this->session->set_flashdata('warning','Falha na identificação, Email ou senha incorretos!!!');
             redirect('/');
